@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Restaurants\" />
+    <ProjectReference Include="..\Restaurants.Data\Restaurants.Data.csproj" />
   </ItemGroup>
 
 </Project>

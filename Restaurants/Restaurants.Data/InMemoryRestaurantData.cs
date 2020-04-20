@@ -17,6 +17,12 @@ namespace Restaurants.Data
                 new Restaurant { Id = 3, Name = "Lake restaurant 3", Location = "123 There street, Someton", Cuisine = CuisineType.Chinese }
             };
         }
+
+        public Restaurant GetById(int id)
+        {
+            return restaurants.SingleOrDefault(r => r.Id == id);
+        }
+
         public IEnumerable<Restaurant> GetRestaurantsByName(string name = null)
         {
             //String.Equals(s, "Foo", StringComparison.CurrentCultureIgnoreCase)

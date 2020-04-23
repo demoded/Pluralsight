@@ -45,6 +45,11 @@ namespace Restaurants.Data
             return restaurants.SingleOrDefault(r => r.Id == id);
         }
 
+        public int GetCountOfRestaurants()
+        {
+            return restaurants.Count();
+        }
+
         public IEnumerable<Restaurant> GetRestaurantsByName(string name = null)
         {
             //String.Equals(s, "Foo", StringComparison.CurrentCultureIgnoreCase)

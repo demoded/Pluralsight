@@ -41,6 +41,11 @@ namespace Restaurants.Data
             return _db.Restaurants.Find(id);
         }
 
+        public int GetCountOfRestaurants()
+        {
+            return _db.Restaurants.Count();
+        }
+
         public IEnumerable<Restaurant> GetRestaurantsByName(string name)
         {
             return _db.Restaurants.Where<Restaurant>(r => r.Name.IndexOf(name ?? "", System.StringComparison.OrdinalIgnoreCase) != -1)
